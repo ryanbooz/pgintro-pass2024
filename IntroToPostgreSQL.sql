@@ -12,9 +12,15 @@ FROM
 --creating a database
 CREATE DATABASE ourfirstdb;
 
+DROP database ourfirstdb;
+
 
 --creating a role
 CREATE ROLE newowner;
+
+CREATE TABLESPACE newtablespace '/bu'
+
+
 
 
 --controlling creation
@@ -90,8 +96,8 @@ CREATE TABLE IF NOT EXISTS radio.radios
 
 --adding a foreign key
 ALTER TABLE radio.radios
-ADD foreign key (radiobrandid) 
-            references radio.radiobrand;
+ADD FOREIGN KEY (radiobrandid) 
+            REFERENCES radio.radiobrand;
            
 
 
